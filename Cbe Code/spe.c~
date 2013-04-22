@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<spu_mfcio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<malloc.h>
+int main(unsigned long long speid) {
+ // read SPU id using mailbox
+  unsigned int spu_id = spu_read_in_mbox();
+  printf ("\n Hello world ! SPU %llx %d\n",speid,spu_id);
+  return 0;
+}
